@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset={?$jieqi_charset?}" />
+<meta http-equiv="refresh" content='4; url={?$url?}'>
+<title>{?$pagetitle?}</title>
+<link rel="stylesheet" rev="stylesheet" href="{?$jieqi_themeurl?}css/style.css" type="text/css" media="all" />
+<script language="Javascript">
+function Show(divid) 
+{
+  divid.filters.revealTrans.apply(); 
+  divid.style.visibility = "visible"; 
+  divid.filters.revealTrans.play(); 
+}
+function Hide(divid) 
+{
+  divid.filters.revealTrans.apply();
+  divid.style.visibility = "hidden";
+  divid.filters.revealTrans.play();
+  window.location.href='{?$url?}';
+}
+setTimeout("Hide(msgboard)",3000);
+</script>
+<script language="javascript" type="text/javascript" src="{?$jieqi_url?}/scripts/common.js"></script>
+</head>
+<body onLoad="Show(msgboard)">
+<div id="msgboard" style="FILTER: revealTrans(transition=23,duration=0.5) blendTrans(duration=0.5); margin-top:150px; width:350px; height:100px; z-index:1; visibility: hidden">
+<table width="550px" align="center" class="grid">
+	<caption>{?$title?}</caption>
+	<tr>
+	<td><br />
+	  {?$content?}<br /><br />如不能自动跳转，<a href="{?$url?}">点击这里直接进入！</a><br />
+	</tr>
+	<tr>
+	<td>版权所有&copy; <a href="{?$jieqi_url?}/">{?$jieqi_sitename?}</a></td>
+	</tr>
+  </table>
+</div>
+</div>
+</body>
+</html>

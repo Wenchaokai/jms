@@ -1,0 +1,7 @@
+<ul class="ulmul cb">
+{?section name=i loop=$obookrows?}
+<li style="float:left;width:24.99%;text-align:center;line-height:200%;">
+<a href="{?$obookrows[i].url_obookinfo?}" target="_blank"><img src="{?$obookrows[i].url_image?}" style="border:1px solid gray;width:85px;height:100px;"></a><br /><a href="{?$obookrows[i].url_obookinfo?}" target="_blank">{?$obookrows[i].obookname?}</a>
+</li>
+{?/section?}
+</ul>
